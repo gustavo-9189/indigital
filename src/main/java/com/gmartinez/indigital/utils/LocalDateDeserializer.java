@@ -25,8 +25,7 @@ public class LocalDateDeserializer extends JsonDeserializer<LocalDate> {
         try {
             dateDeserialize = LocalDate.parse(dateString, DateTimeFormatter.ISO_LOCAL_DATE);
         } catch (DateTimeParseException e) {
-            log.error(e.getMessage());
-            log.error("El formato de la fecha: {} no coincide con {}", dateString, DateTimeFormatter.ISO_LOCAL_DATE);
+            log.error("El formato de la fecha: {} no coincide con el formato YYYY-MM-DD", dateString);
         }
         return dateDeserialize;
     }

@@ -54,7 +54,7 @@ public class CustomerController {
     }
 
     @GetMapping("/listclientes")
-    public ResponseEntity<List<Customer>> getCostumers() {
+    public ResponseEntity<List<Customer>> getCustomers() {
         List<Customer> customers;
         try {
             customers = customerService.getCustomers();
